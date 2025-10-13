@@ -84,27 +84,40 @@
     }
 
     /* NICK — anime từng ký tự */
-    .nick{
-      font-family:"Rampart One", system-ui, sans-serif;
-      font-size:54px; letter-spacing:.06em; line-height:1.05; margin-top:0;
-      color:#fff;
-      text-shadow:0 2px 10px rgba(0,0,0,.45);
-      user-select:none;
-    }
-    .nick .char{
-      opacity:0; display:inline-block;
-      transform:translateY(10px) scale(.97);
-      filter:drop-shadow(0 6px 22px rgba(0,0,0,.45));
-      animation: charIn .5s cubic-bezier(.22,.61,.36,1) forwards;
-      animation-delay: calc(var(--i,0) * .12s);
-    }
-    @keyframes charIn{to{opacity:1; transform:translateY(0) scale(1)}}
+    .nick {
+  font-family: "Rampart One", system-ui, sans-serif;
+  font-size: 54px;
+  letter-spacing: .06em;
+  line-height: 1.05;
+  margin-top: 0;
+  margin-bottom: 0.30em; /* 👈 cách xa 3 dòng với tagline */
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .45);
+  user-select: none;
+}
 
-    .tagline{
-      color:#d8d8d8;margin-top:6px;
-      font-family:"Rubik Doodle Dots", cursive;
-      letter-spacing:.02em;
-    }
+.nick .char {
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(10px) scale(.97);
+  filter: drop-shadow(0 6px 22px rgba(0, 0, 0, .45));
+  animation: charIn .5s cubic-bezier(.22, .61, .36, 1) forwards;
+  animation-delay: calc(var(--i, 0) * .12s);
+}
+
+@keyframes charIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.tagline {
+  color: #d8d8d8;
+  margin-top: 6px;
+  font-family: "Rubik Doodle Dots", cursive;
+  letter-spacing: .02em;
+}
 
     /* Socials */
     .socials{display:flex;justify-content:center;gap:12px;margin:10px 0 18px}
@@ -211,6 +224,7 @@
       <div class="avatar"><img id="avatarImg" src="img/avt.jpg" onerror="this.onerror=null;this.src='https://i.pravatar.cc/300?img=68'" alt="avatar"></div>
       <div class="nick" id="nick">Epic</div>
       <div class="tagline">Thông Tin Liên Hệ 👇 </div>
+      <div class="tagline">Zalo:0911436107 </div>
 
       <div class="socials" aria-label="social links">
         <a href="https://www.instagram.com/nghihatuan/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
